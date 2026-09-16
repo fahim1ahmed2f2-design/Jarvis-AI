@@ -1,0 +1,167 @@
+/* HUD Debug Dock Container inside Right Column */
+.debug-dock-container {
+  background: rgba(3, 8, 20, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), inset 0 0 12px rgba(0, 240, 255, 0.05);
+  transition: var(--transition-smooth);
+  width: 100%;
+}
+
+.debug-dock-container.is-collapsed {
+  padding: 0.45rem 0.8rem;
+}
+
+.dock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dock-title {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+}
+
+.dock-toggle-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-cyan-dim);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dock-toggle-btn:hover {
+  border-color: var(--color-cyan-glow);
+  color: #ffffff;
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
+}
+
+.dock-body {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dock-buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.35rem;
+}
+
+.dock-state-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  color: var(--color-text-dim);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.dock-state-btn:hover {
+  background: rgba(0, 240, 255, 0.08);
+  border-color: rgba(0, 240, 255, 0.5);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-hotkey {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  opacity: 0.5;
+}
+
+.btn-label {
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-top: 3px;
+}
+
+.btn-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  transition: background-color 0.25s ease;
+}
+
+/* Active Button States */
+.dock-state-btn.is-active {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: var(--color-cyan-glow);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.3), inset 0 0 8px rgba(0, 240, 255, 0.2);
+}
+
+.dock-state-btn.is-active .btn-indicator {
+  background: var(--color-cyan-glow);
+  box-shadow: 0 0 6px var(--color-cyan-glow);
+}
+
+/* Specific Active Themes */
+.dock-state-btn.btn-thinking.is-active {
+  border-color: #a855f7;
+  box-shadow: 0 0 14px rgba(168, 85, 247, 0.4), inset 0 0 8px rgba(168, 85, 247, 0.2);
+}
+.dock-state-btn.btn-thinking.is-active .btn-indicator {
+  background: #a855f7;
+}
+
+.dock-state-btn.btn-executing.is-active {
+  border-color: #10b981;
+  box-shadow: 0 0 14px rgba(168, 85, 247, 0.4), inset 0 0 8px rgba(16, 185, 129, 0.2);
+}
+.dock-state-btn.btn-executing.is-active .btn-indicator {
+  background: #10b981;
+}
+
+.dock-state-btn.btn-error.is-active {
+  border-color: #ef4444;
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.5), inset 0 0 8px rgba(239, 68, 68, 0.3);
+}
+.dock-state-btn.btn-error.is-active .btn-indicator {
+  background: #ef4444;
+}
+
+.dock-footer {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 0.35rem;
+}
+
+.dock-tip {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--color-text-dim);
+  letter-spacing: 0.05em;
+}
+
+.dock-tip strong {
+  color: var(--color-cyan-glow);
+}

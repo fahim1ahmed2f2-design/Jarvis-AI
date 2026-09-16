@@ -1,0 +1,50 @@
+# JARVIS v2.0 — Python Dependencies
+# Core Framework
+fastapi>=0.115.0
+uvicorn>=0.30.0
+pydantic>=2.8.0
+python-dotenv>=1.0.0
+python-multipart>=0.0.9
+
+# AI Providers
+openai>=1.50.0
+anthropic>=0.34.0
+google-generativeai>=0.8.0
+groq>=0.9.0
+
+# System Monitoring
+psutil>=6.0.0
+
+# Automation
+pyautogui>=0.9.54
+pygetwindow>=0.0.9
+pillow>=10.0.0
+pyperclip>=1.8.0
+
+# Screen / Vision
+mss>=9.0.0
+
+# Web / HTTP
+httpx>=0.27.0
+aiohttp>=3.9.0
+websockets>=13.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Voice / TTS
+edge-tts>=7.0.0
+
+# Utilities
+tabulate>=0.9.0
+numpy>=1.26.0
+sounddevice>=0.4.6
+
+# V2 — RAG Knowledge Base
+faiss-cpu>=1.7.4
+sentence-transformers>=2.6.0
+
+# V2 — Document Support
+pypdf>=4.0.0           # PDF ingestion
+python-docx>=1.1.0     # DOCX ingestion
+
+
